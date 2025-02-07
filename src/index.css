@@ -2,8 +2,8 @@
 @plugin "daisyui";
 
 /* Dark mode */
-/* @custom-variant dark (&:where(.dark, .dark *)); */
-@custom-variant dark (&:where([data-theme=dark], [data-theme=dark] *));
+@custom-variant dark (&:where(.dark, .dark *));
+/* @custom-variant dark (&:where([data-theme=dark], [data-theme=dark] *)); */
 
 .fugaz-one-regular {
   font-family: "Fugaz One", serif;
@@ -12,11 +12,33 @@
 }
 
 /* Add smooth transitions for theme changes */
+/* *,
+*::before,
+*::after {
+  transition-property: color, background-color, border-color,
+    text-decoration-color, fill, stroke;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-duration: 00ms;
+} */
+/* Disable transition initially */
+/* html.no-transition *,
+html.no-transition *::before,
+html.no-transition *::after {
+  transition: none !important;
+} */
+
+/* 1. Disable transitions on the first load */
+/* html.no-transition *,
+html.no-transition *::before,
+html.no-transition *::after {
+  transition: none !important;
+} */
+/* Apply transition normally after the first load */
 *,
 *::before,
 *::after {
   transition-property: color, background-color, border-color,
     text-decoration-color, fill, stroke;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-  transition-duration: 400ms;
+  transition-duration: 00ms !important;
 }

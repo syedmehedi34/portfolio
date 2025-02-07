@@ -90,10 +90,7 @@ const cardVariants = {
 
 const Projects = () => {
   return (
-    <section
-      id="projects"
-      className="py-20 bg-gradient-to-b from-gray-50 to-white"
-    >
+    <section id="projects" className="py-20 bg-gray-50 dark:bg-gray-800">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <motion.div
           initial="hidden"
@@ -102,7 +99,7 @@ const Projects = () => {
           variants={containerVariants}
         >
           <motion.h2
-            className="text-3xl font-bold text-center text-gray-900 mb-12"
+            className="text-3xl font-bold text-center text-gray-900 dark:text-gray-50 mb-12"
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: false }}
@@ -120,7 +117,7 @@ const Projects = () => {
                   scale: 1.02,
                   transition: { duration: 0.3 },
                 }}
-                className="bg-white rounded-xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-300 transform perspective-1000"
+                className="bg-white dark:bg-gray-600 rounded-xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-300 transform perspective-1000"
               >
                 <div className="relative overflow-hidden">
                   <motion.img
@@ -132,11 +129,11 @@ const Projects = () => {
                   />
                 </div>
                 <div className="p-6">
-                  <h3 className="text-xl font-semibold text-gray-900 mb-2">
+                  <h3 className="text-xl font-semibold text-gray-900 dark:text-gray-50 mb-2">
                     {project.title}
                   </h3>
                   <p
-                    className="text-gray-600 mb-4 text-sm lineclamp-3
+                    className="text-gray-600 dark:text-gray-200 mb-4 text-sm lineclamp-3
                   "
                   >
                     {project.description}
@@ -156,14 +153,14 @@ const Projects = () => {
                       </motion.span>
                     ))}
                   </div>
-                  <div className="flex space-x-4">
+                  <div className="flex space-x-4 ">
                     <motion.a
                       whileHover={{ scale: 1.1, y: -2 }}
                       whileTap={{ scale: 0.95 }}
                       href={project.github}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="flex items-center text-gray-600 hover:text-indigo-600 transition-colors duration-300"
+                      className="flex items-center text-gray-600 dark:text-gray-50 hover:text-indigo-600 transition-colors duration-300"
                     >
                       <Github className="w-5 h-5 mr-1" />
                       Code
@@ -174,7 +171,7 @@ const Projects = () => {
                       href={project.live}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="flex items-center text-gray-600 hover:text-indigo-600 transition-colors duration-300"
+                      className="flex items-center text-gray-600 dark:text-gray-50 hover:text-indigo-600 transition-colors duration-300"
                     >
                       <ExternalLink className="w-5 h-5 mr-1" />
                       Live Demo
