@@ -54,7 +54,7 @@ const Contact = () => {
               <div className="space-y-8">
                 <motion.div
                   whileHover={{ scale: 1.02 }}
-                  className="flex items-start space-x-4 p-4 rounded-xl bg-gradient-to-r from-indigo-50 to-white"
+                  className="flex items-start space-x-4 p-4 rounded-xl bg-gray-50 dark:bg-gray-700"
                 >
                   <div className="flex-shrink-0">
                     <div className="w-12 h-12 bg-indigo-600 rounded-xl flex items-center justify-center">
@@ -62,16 +62,18 @@ const Contact = () => {
                     </div>
                   </div>
                   <div>
-                    <h3 className="text-lg font-semibold text-gray-900">
+                    <h3 className="text-lg font-semibold text-gray-900 dark:text-gray-50">
                       Address
                     </h3>
-                    <p className="mt-1 text-gray-600">Rajshahi, Bangladesh</p>
+                    <p className="mt-1 text-gray-600 dark:text-gray-400">
+                      Rajshahi, Bangladesh
+                    </p>
                   </div>
                 </motion.div>
 
                 <motion.div
                   whileHover={{ scale: 1.02 }}
-                  className="flex items-start space-x-4 p-4 rounded-xl bg-gradient-to-r from-indigo-50 to-white"
+                  className="flex items-start space-x-4 p-4 rounded-xl bg-gray-50 dark:bg-gray-700"
                 >
                   <div className="flex-shrink-0">
                     <div className="w-12 h-12 bg-indigo-600 rounded-xl flex items-center justify-center">
@@ -79,7 +81,7 @@ const Contact = () => {
                     </div>
                   </div>
                   <div>
-                    <h3 className="text-lg font-semibold text-gray-900 flex items-center space-x-2">
+                    <h3 className="text-lg font-semibold text-gray-900 dark:text-gray-50 flex items-center space-x-2">
                       <span>Phone </span>
                       <span>
                         <img
@@ -89,13 +91,15 @@ const Contact = () => {
                         />
                       </span>
                     </h3>
-                    <p className="mt-1 text-gray-600">+880 1731771438</p>
+                    <p className="mt-1 text-gray-600 dark:text-gray-400">
+                      +880 1731771438
+                    </p>
                   </div>
                 </motion.div>
 
                 <motion.div
                   whileHover={{ scale: 1.02 }}
-                  className="flex items-start space-x-4 p-4 rounded-xl bg-gradient-to-r from-indigo-50 to-white"
+                  className="flex items-start space-x-4 p-4 rounded-xl bg-gray-50 dark:bg-gray-700"
                 >
                   <div className="flex-shrink-0">
                     <div className="w-12 h-12 bg-indigo-600 rounded-xl flex items-center justify-center">
@@ -103,10 +107,12 @@ const Contact = () => {
                     </div>
                   </div>
                   <div>
-                    <h3 className="text-lg font-semibold text-gray-900">
+                    <h3 className="text-lg font-semibold text-gray-900 dark:text-gray-50">
                       Email
                     </h3>
-                    <p className="mt-1 text-gray-600">syedmehedi34@gmail.com</p>
+                    <p className="mt-1 text-gray-600 dark:text-gray-400">
+                      syedmehedi34@gmail.com
+                    </p>
                   </div>
                 </motion.div>
               </div>
@@ -132,7 +138,7 @@ const Contact = () => {
                     name="name"
                     id="name"
                     required
-                    className="block w-full px-4 py-3 rounded-xl border-2 border-gray-200 focus:border-indigo-500 focus:ring-2 focus:ring-indigo-200 outline-none transition-all duration-300 text-black dark:text-gray-50"
+                    className="block w-full px-4 py-3 rounded-xl border-2 border-gray-200 dark:border-gray-500 focus:border-indigo-500 focus:ring-2 focus:ring-indigo-200 outline-none transition-all duration-300 text-black dark:text-gray-50"
                     placeholder="Your Name"
                   />
                 </div>
@@ -148,7 +154,7 @@ const Contact = () => {
                     name="email"
                     id="email"
                     required
-                    className="block w-full px-4 py-3 rounded-xl border-2 border-gray-200 focus:border-indigo-500 focus:ring-2 focus:ring-indigo-200 outline-none transition-all duration-300 text-black dark:text-gray-50"
+                    className="block w-full px-4 py-3 rounded-xl border-2 border-gray-200 dark:border-gray-500 focus:border-indigo-500 focus:ring-2 focus:ring-indigo-200 outline-none transition-all duration-300 text-black dark:text-gray-50"
                     placeholder="your.email@example.com"
                   />
                 </div>
@@ -164,7 +170,7 @@ const Contact = () => {
                     id="message"
                     rows={4}
                     required
-                    className="block w-full px-4 py-3 rounded-xl border-2 border-gray-200 focus:border-indigo-500 focus:ring-2 focus:ring-indigo-200 outline-none transition-all duration-300 resize-none text-black dark:text-gray-50"
+                    className="block w-full px-4 py-3 rounded-xl border-2 border-gray-200 dark:border-gray-500 focus:border-indigo-500 focus:ring-2 focus:ring-indigo-200 outline-none transition-all duration-300 resize-none text-black dark:text-gray-50"
                     placeholder="Your Message"
                   />
                 </div>
