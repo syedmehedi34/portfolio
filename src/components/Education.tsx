@@ -56,7 +56,7 @@ const itemVariants = {
 
 const Education = () => {
   return (
-    <section id="education" className="py-20 bg-white">
+    <section id="education" className="py-20 bg-white dark:bg-gray-800">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <motion.div
           initial="hidden"
@@ -65,7 +65,7 @@ const Education = () => {
           variants={containerVariants}
         >
           <motion.h2
-            className="text-3xl font-bold text-center text-gray-900 mb-12"
+            className="text-3xl font-bold text-center text-gray-900 dark:text-gray-50 mb-12"
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: false }}
@@ -73,7 +73,7 @@ const Education = () => {
           >
             Education
           </motion.h2>
-          <div className="space-y-8">
+          <div className="space-y-8 ">
             {educationData.map((edu, index) => (
               <motion.div
                 key={index}
@@ -82,7 +82,7 @@ const Education = () => {
                   scale: 1.02,
                   transition: { duration: 0.2 },
                 }}
-                className="flex gap-4 bg-gradient-to-r from-gray-50 to-white p-6 rounded-lg shadow-lg hover:shadow-xl transition-all duration-300"
+                className="flex gap-4 bg-gradient-to-r from-gray-50 to-white  p-6 rounded-lg shadow-lg hover:shadow-xl transition-all duration-300 dark:bg-gradient-to-r dark:from-gray-700 dark:to-gray-600"
               >
                 <div className="flex-shrink-0">
                   <motion.div
@@ -96,14 +96,18 @@ const Education = () => {
                   </motion.div>
                 </div>
                 <div>
-                  <h3 className="text-xl font-semibold text-gray-900">
+                  <h3 className="text-xl font-semibold text-gray-900 dark:text-gray-50">
                     {edu.degree}
                   </h3>
-                  <p className="text-indigo-600 font-medium">
+                  <p className="text-indigo-600 dark:text-indigo-500 font-medium">
                     {edu.institution}
                   </p>
-                  <p className="text-gray-500 mt-1">{edu.year}</p>
-                  <p className="text-gray-600 mt-2">{edu.description}</p>
+                  <p className="text-gray-500 dark:text-gray-200 mt-1">
+                    {edu.year}
+                  </p>
+                  <p className="text-gray-600 dark:text-gray-200 mt-2">
+                    {edu.description}
+                  </p>
                 </div>
               </motion.div>
             ))}

@@ -6,7 +6,7 @@ const Hero = () => {
   return (
     <section
       id="home"
-      className="min-h-screen flex items-center md:pt-16 pt-32  bg-gray-50 "
+      className="min-h-screen flex items-center md:pt-16 pt-32 pb-10  bg-gray-50 dark:bg-gray-800"
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
@@ -15,12 +15,14 @@ const Hero = () => {
             animate={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.5 }}
           >
-            <h2 className="text-4xl font-bold text-gray-900 mb-4">
+            <h2 className="text-4xl font-bold text-gray-900 dark:text-gray-50 mb-4">
               Hi, I&apos;m{" "}
               <span className="text-indigo-600">Syed Mehedi Hasan</span>
             </h2>
-            <h3 className="text-2xl text-gray-700 mb-6">Front-End Developer</h3>
-            <p className="text-gray-600 mb-8">
+            <h3 className="text-2xl text-gray-700 mb-6 dark:text-gray-50">
+              Front-End Developer
+            </h3>
+            <p className="text-gray-600 dark:text-gray-50 mb-8">
               Electronics and Telecommunication Engineering student at RUET,
               passionate about creating beautiful and functional web
               experiences.
@@ -32,7 +34,7 @@ const Hero = () => {
                 rel="noopener noreferrer"
                 className="text-gray-800 hover:text-[#333]"
               >
-                <Github className="w-7 h-7" />
+                <Github className="w-7 h-7 dark:text-gray-50" />
               </a>
               <a
                 href="https://facebook.com/syedmehedi34"
