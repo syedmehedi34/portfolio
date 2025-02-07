@@ -117,13 +117,13 @@ const Contact = () => {
               whileInView={{ opacity: 1, x: 0 }}
               viewport={{ once: false }}
               transition={{ duration: 0.5, delay: 0.2 }}
-              className="bg-white p-8 rounded-2xl shadow-[0_8px_30px_rgb(0,0,0,0.12)] hover:shadow-[0_8px_30px_rgb(0,0,0,0.16)] transition-shadow duration-300"
+              className="bg-white dark:bg-gray-600 p-8 rounded-2xl shadow-[0_8px_30px_rgb(0,0,0,0.12)] hover:shadow-[0_8px_30px_rgb(0,0,0,0.16)] transition-shadow duration-300"
             >
               <form ref={formRef} onSubmit={handleSubmit} className="space-y-6">
                 <div>
                   <label
                     htmlFor="name"
-                    className="block text-sm font-medium text-gray-700 mb-2"
+                    className="block text-sm font-medium text-gray-700 dark:text-gray-50 mb-2 "
                   >
                     Name
                   </label>
@@ -132,14 +132,14 @@ const Contact = () => {
                     name="name"
                     id="name"
                     required
-                    className="block w-full px-4 py-3 rounded-xl border-2 border-gray-200 focus:border-indigo-500 focus:ring-2 focus:ring-indigo-200 outline-none transition-all duration-300 text-black"
+                    className="block w-full px-4 py-3 rounded-xl border-2 border-gray-200 focus:border-indigo-500 focus:ring-2 focus:ring-indigo-200 outline-none transition-all duration-300 text-black dark:text-gray-50"
                     placeholder="Your Name"
                   />
                 </div>
                 <div>
                   <label
                     htmlFor="email"
-                    className="block text-sm font-medium text-gray-700 mb-2"
+                    className="block text-sm font-medium text-gray-700 dark:text-gray-50 mb-2"
                   >
                     Email
                   </label>
@@ -148,14 +148,14 @@ const Contact = () => {
                     name="email"
                     id="email"
                     required
-                    className="block w-full px-4 py-3 rounded-xl border-2 border-gray-200 focus:border-indigo-500 focus:ring-2 focus:ring-indigo-200 outline-none transition-all duration-300 text-black"
+                    className="block w-full px-4 py-3 rounded-xl border-2 border-gray-200 focus:border-indigo-500 focus:ring-2 focus:ring-indigo-200 outline-none transition-all duration-300 text-black dark:text-gray-50"
                     placeholder="your.email@example.com"
                   />
                 </div>
                 <div>
                   <label
                     htmlFor="message"
-                    className="block text-sm font-medium text-gray-700 mb-2"
+                    className="block text-sm font-medium text-gray-700 dark:text-gray-50 mb-2"
                   >
                     Message
                   </label>
@@ -164,7 +164,7 @@ const Contact = () => {
                     id="message"
                     rows={4}
                     required
-                    className="block w-full px-4 py-3 rounded-xl border-2 border-gray-200 focus:border-indigo-500 focus:ring-2 focus:ring-indigo-200 outline-none transition-all duration-300 resize-none text-black"
+                    className="block w-full px-4 py-3 rounded-xl border-2 border-gray-200 focus:border-indigo-500 focus:ring-2 focus:ring-indigo-200 outline-none transition-all duration-300 resize-none text-black dark:text-gray-50"
                     placeholder="Your Message"
                   />
                 </div>
