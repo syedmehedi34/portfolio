@@ -6,7 +6,7 @@ export const projects = [
       "AssetFlow is a web app for managing company assets, allowing HR managers to assign, track, and report on returnable and non-returnable assets. Employees can request and return assets, while the system automates notifications and subscription management for improved efficiency.",
     fullDescription:
       "AssetFlow is a web app for managing company assets, allowing HR managers to assign, track, and report on returnable and non-returnable assets. Employees can request and return assets, while the system automates notifications and subscription management for improved efficiency.",
-    image: "./../../public/asset-flow.png",
+    image: "./asset-flow.png",
     technologies: [
       "React",
       "Tailwind CSS",
@@ -59,7 +59,7 @@ export const projects = [
       "Next Blog is a modern, fully-responsive blogging platform built with React, Firebase, and MongoDB. It features user authentication, wish-list management, and a commenting system. Admins can manage content, and the site is optimised for mobile, tablet, and desktop devices.",
     fullDescription:
       "Next Blog is a modern, fully-responsive blogging platform built with React, Firebase, and MongoDB. It features user authentication, wish-list management, and a commenting system. Admins can manage content, and the site is optimised for mobile, tablet, and desktop devices.",
-    image: "./../../public/next-blog.png",
+    image: "./next-blog.png",
     technologies: [
       "React",
       "Tailwind CSS",
@@ -114,7 +114,7 @@ export const projects = [
       "Gaming Groove is a game review app where users can browse, share, and manage game reviews. It features secure login, user dashboards, and a watchlist. Built with React, Firebase, and MongoDB, it offers a responsive and easy-to-use platform for gaming enthusiasts.",
     fullDescription:
       "Gaming Groove is a game review app where users can browse, share, and manage game reviews. It features secure login, user dashboards, and a watchlist. Built with React, Firebase, and MongoDB, it offers a responsive and easy-to-use platform for gaming enthusiasts.",
-    image: "./../../public/gaming-groove.png",
+    image: "./gaming-groove.png",
     technologies: [
       "React",
       "Tailwind CSS",
