@@ -170,7 +170,7 @@ const Navbar = () => {
           animate={{ opacity: 1, y: 0 }}
           className="md:hidden bg-white"
         >
-          <div className="px-2 pt-2 pb-3 space-y-1 sm:px-3">
+          <div className="px-2 pt-2 pb-3 space-y-1 sm:px-3 bg-transparent dark:bg-gray-800 shadow-2xl">
             {navItems.map((item) => (
               <div key={item} className="relative">
                 <ScrollLink
@@ -182,7 +182,7 @@ const Navbar = () => {
                   className={`block px-3 py-2 rounded-md text-base font-medium cursor-pointer capitalize ${
                     activeSection === item
                       ? "text-indigo-600"
-                      : "text-gray-700 hover:text-indigo-600"
+                      : "text-gray-700 dark:text-gray-100 hover:text-indigo-600"
                   }`}
                   onClick={() => setIsOpen(false)}
                 >
@@ -206,6 +206,26 @@ const Navbar = () => {
               <FileDown className="w-4 h-4 mr-2" />
               Resume
             </a>
+            {/* // */}
+            <div className="ml-3 flex items-center mt-3 gap-3">
+              <p>Dark Mode </p>
+              <label className="swap swap-rotate">
+                <input
+                  type="checkbox"
+                  className="theme-controller"
+                  onChange={toggleTheme}
+                  checked={theme === "dark"}
+                />
+
+                <p className="swap-off h-10 w-10 fill-current flex items-center justify-center text-black">
+                  <MdSunny size={26} />
+                </p>
+                <p className="swap-on h-10 w-10 fill-current flex items-center justify-center text-white">
+                  <FaMoon size={22} />
+                </p>
+              </label>
+            </div>
+            {/* // */}
           </div>
         </motion.div>
       )}
