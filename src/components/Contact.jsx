@@ -1,7 +1,7 @@
 /* eslint-disable no-unused-vars */
 import { useRef, useState } from "react";
 import { motion } from "framer-motion";
-import { MapPin, Phone, Mail, Send } from "lucide-react";
+import { MapPin, Phone, Mail, Send, Dot } from "lucide-react";
 import emailjs from "@emailjs/browser";
 
 const Contact = () => {
@@ -109,8 +109,15 @@ const Contact = () => {
                     <h3 className="text-lg font-semibold text-gray-900 dark:text-gray-50">
                       Email
                     </h3>
-                    <p className="mt-1 text-gray-600 dark:text-gray-400">
-                      syedmehedi34@gmail.com
+                    <p className="mt-1 text-gray-600 dark:text-gray-400 flex flex-col space-y-1">
+                      <span className="flex items-center">
+                        <Dot />
+                        syedmehedi34@gmail.com
+                      </span>
+                      <span className="flex items-center">
+                        <Dot />
+                        2004051@student.ruet.ac.bd{" "}
+                      </span>
                     </p>
                   </div>
                 </motion.div>
