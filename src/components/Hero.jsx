@@ -1,6 +1,7 @@
 import { motion } from "framer-motion";
 import { Github, Linkedin, Mail, Facebook, FileDown } from "lucide-react";
 import photo from "/my-photo.jpeg";
+import { Typewriter } from "react-simple-typewriter";
 
 const Hero = () => {
   return (
@@ -17,7 +18,18 @@ const Hero = () => {
           >
             <h2 className="text-4xl font-bold text-gray-900 dark:text-gray-50 mb-4">
               Hi, I&apos;m{" "}
-              <span className="text-indigo-600">Syed Mehedi Hasan</span>
+              {/* <span className="text-indigo-600">Syed Mehedi Hasan</span> */}
+              <span className="text-indigo-600">
+                <Typewriter
+                  words={["  Syed Mehedi Hasan"]}
+                  loop={false}
+                  cursor
+                  cursorStyle="_"
+                  typeSpeed={70}
+                  deleteSpeed={50}
+                  delaySpeed={4000}
+                />
+              </span>
             </h2>
             <h3 className="text-2xl text-gray-700 mb-6 dark:text-gray-50">
               Front-End Developer
