@@ -1,16 +1,15 @@
-import React, { useRef, useState } from "react";
+/* eslint-disable no-unused-vars */
+import { useRef, useState } from "react";
 import { motion } from "framer-motion";
 import { MapPin, Phone, Mail, Send } from "lucide-react";
 import emailjs from "@emailjs/browser";
 
 const Contact = () => {
-  const formRef = useRef<HTMLFormElement>(null);
+  const formRef = useRef(null);
   const [isSubmitting, setIsSubmitting] = useState(false);
-  const [submitStatus, setSubmitStatus] = useState<
-    "idle" | "success" | "error"
-  >("idle");
+  const [submitStatus, setSubmitStatus] = useState("idle");
 
-  const handleSubmit = async (e: React.FormEvent) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
     if (!formRef.current) return;
 

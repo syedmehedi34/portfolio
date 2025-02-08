@@ -1,13 +1,12 @@
-import React from "react";
-import Navbar from "./components/Navbar";
+import Navbar from "./components/Navbar.jsx";
 import Hero from "./components/Hero.jsx";
-import About from "./components/About";
-import Skills from "./components/Skills";
-import Education from "./components/Education";
-import Projects from "./components/Projects";
-import Contact from "./components/Contact";
+import About from "./components/About.jsx";
+import Skills from "./components/Skills.jsx";
+import Education from "./components/Education.jsx";
+import Projects from "./components/Projects.jsx";
+import Contact from "./components/Contact.jsx";
 import Footer from "./components/Footer.jsx";
-import { ThemeProvider } from "./Provider/ThemeContext";
+import { ThemeProvider } from "./Provider/ThemeContext.js";
 
 function App() {
   return (
