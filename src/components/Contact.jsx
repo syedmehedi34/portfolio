@@ -111,12 +111,18 @@ const Contact = () => {
                     </h3>
                     <p className="mt-1 text-gray-600 dark:text-gray-400 flex flex-col space-y-1">
                       <span className="flex items-center">
-                        <Dot />
+                        <span className=" max-[430px]:hidden max-[430px]:text-[12px]">
+                          <Dot />
+                        </span>
                         syedmehedi34@gmail.com
                       </span>
-                      <span className="flex items-center">
-                        <Dot />
-                        2004051@student.ruet.ac.bd{" "}
+                      <span className="flex flex-wrap items-center">
+                        <span className="max-[430px]:hidden max-[430px]:text-[12px]">
+                          <Dot />
+                        </span>
+                        <span className="break-all">
+                          2004051@student.ruet.ac.bd
+                        </span>
                       </span>
                     </p>
                   </div>
