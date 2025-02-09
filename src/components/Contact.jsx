@@ -56,8 +56,8 @@ const Contact = () => {
                   className="flex items-start space-x-4 p-4 rounded-xl bg-gray-50 dark:bg-gray-700"
                 >
                   <div className="flex-shrink-0">
-                    <div className="w-12 h-12 bg-indigo-600 rounded-xl flex items-center justify-center">
-                      <MapPin className="w-6 h-6 text-white" />
+                    <div className="md:w-12 md:h-12 h-8 w-8 bg-indigo-600 rounded-xl flex items-center justify-center">
+                      <MapPin className="md:w-6 md:h-6 h-4 w-4 text-white" />
                     </div>
                   </div>
                   <div>
@@ -75,8 +75,8 @@ const Contact = () => {
                   className="flex items-start space-x-4 p-4 rounded-xl bg-gray-50 dark:bg-gray-700"
                 >
                   <div className="flex-shrink-0">
-                    <div className="w-12 h-12 bg-indigo-600 rounded-xl flex items-center justify-center">
-                      <Phone className="w-6 h-6 text-white" />
+                    <div className="md:w-12 md:h-12 h-8 w-8 bg-indigo-600 rounded-xl flex items-center justify-center">
+                      <Phone className="md:w-6 md:h-6 h-4 w-4 text-white" />
                     </div>
                   </div>
                   <div>
@@ -84,7 +84,7 @@ const Contact = () => {
                       <span>Phone </span>
                       <span>
                         <img
-                          className="w-5 h-5"
+                          className="md:w-5 md:h-5 h-4 w-4"
                           src="https://img.icons8.com/?size=100&id=16713&format=png&color=000000"
                           alt=""
                         />
@@ -101,8 +101,8 @@ const Contact = () => {
                   className="flex items-start space-x-4 p-4 rounded-xl bg-gray-50 dark:bg-gray-700"
                 >
                   <div className="flex-shrink-0">
-                    <div className="w-12 h-12 bg-indigo-600 rounded-xl flex items-center justify-center">
-                      <Mail className="w-6 h-6 text-white" />
+                    <div className="md:w-12 md:h-12 h-8 w-8 bg-indigo-600 rounded-xl flex items-center justify-center">
+                      <Mail className="md:w-6 md:h-6 h-4 w-4 text-white" />
                     </div>
                   </div>
                   <div>
@@ -111,16 +111,18 @@ const Contact = () => {
                     </h3>
                     <p className="mt-1 text-gray-600 dark:text-gray-400 flex flex-col space-y-1">
                       <span className="flex items-center">
-                        <span className=" max-[430px]:hidden max-[430px]:text-[12px]">
+                        <span className=" max-[430px]:hidden ">
                           <Dot />
                         </span>
-                        syedmehedi34@gmail.com
+                        <span className="break-all max-[430px]:text-[12px]">
+                          syedmehedi34@gmail.com
+                        </span>
                       </span>
-                      <span className="flex flex-wrap items-center">
-                        <span className="max-[430px]:hidden max-[430px]:text-[12px]">
+                      <span className="flex items-center">
+                        <span className="max-[430px]:hidden ">
                           <Dot />
                         </span>
-                        <span className="break-all">
+                        <span className="break-all max-[430px]:text-[12px]">
                           2004051@student.ruet.ac.bd
                         </span>
                       </span>
