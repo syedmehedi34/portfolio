@@ -200,7 +200,9 @@ const Contact = () => {
                   ) : (
                     <>
                       <Send className="w-5 h-5" />
-                      <span>Send Message</span>
+                      <span className="text-sm md:text-[16px]">
+                        Send Message
+                      </span>
                     </>
                   )}
                 </motion.button>
