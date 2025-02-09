@@ -114,7 +114,7 @@ const Contact = () => {
                         <span className=" max-[430px]:hidden ">
                           <Dot />
                         </span>
-                        <span className="break-all max-[430px]:text-[12px]">
+                        <span className="break-all max-[430px]:text-sm max-[370px]:text-[12px]">
                           syedmehedi34@gmail.com
                         </span>
                       </span>
@@ -122,7 +122,7 @@ const Contact = () => {
                         <span className="max-[430px]:hidden ">
                           <Dot />
                         </span>
-                        <span className="break-all max-[430px]:text-[12px]">
+                        <span className="break-all max-[430px]:text-sm max-[370px]:text-[12px]">
                           2004051@student.ruet.ac.bd
                         </span>
                       </span>
