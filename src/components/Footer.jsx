@@ -7,7 +7,10 @@ const Footer = () => {
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
           <div>
             <h3 className="text-xl font-bold mb-4">Syed Mehedi Hasan</h3>
-            <p className="text-gray-400">Front-End Developer & ETE Student</p>
+            <p className="text-gray-400">
+              Empowering innovation through technology and creativity. Let's
+              build something amazing together.
+            </p>
           </div>
           <div>
             <h3 className="text-xl font-bold mb-4">Quick Links</h3>
