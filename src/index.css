@@ -1,18 +1,18 @@
-@import "tailwindcss";
+/* @import "tailwindcss";
 @plugin "daisyui";
 
-/* Dark mode */
+Dark mode
 @custom-variant dark (&:where(.dark, .dark *));
-/* @custom-variant dark (&:where([data-theme=dark], [data-theme=dark] *)); */
+@custom-variant dark (&:where([data-theme=dark], [data-theme=dark] *));
 
-/* add font command */
+add font command
 .fugaz-one-regular {
   font-family: "Fugaz One", serif;
   font-weight: 400;
   font-style: normal;
 }
 
-/* Add smooth transitions for theme changes */
+Add smooth transitions for theme changes
 *,
 *::before,
 *::after {
@@ -20,4 +20,73 @@
     text-decoration-color, fill, stroke;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
   transition-duration: 00ms !important;
+} */
+
+@import "tailwindcss";
+@plugin "daisyui";
+
+/* Dark mode */
+@custom-variant dark (&:where(.dark, .dark *));
+
+/* Font definition */
+.fugaz-one-regular {
+  font-family: "Fugaz One", serif;
+  font-weight: 400;
+  font-style: normal;
 }
+
+/* Smooth transitions for theme changes */
+:root {
+  --transition-duration: 300ms;
+}
+
+*,
+*::before,
+*::after {
+  transition-property: color, background-color, border-color,
+    text-decoration-color, fill, stroke, opacity;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-duration: var(--transition-duration);
+}
+
+/* Ensure html and body have smooth transitions */
+html,
+body {
+  transition: background-color var(--transition-duration) ease,
+    color var(--transition-duration) ease;
+}
+
+/** Smooth transitions for common UI elements */
+button,
+a,
+input,
+select,
+textarea {
+  transition: background-color var(--transition-duration) ease,
+    color var(--transition-duration) ease,
+    border-color var(--transition-duration) ease,
+    box-shadow var(--transition-duration) ease;
+}
+
+/* Handle DaisyUI component transitions */
+.btn,
+.card,
+.navbar,
+.modal {
+  transition: background-color var(--transition-duration) ease,
+    color var(--transition-duration) ease,
+    border-color var(--transition-duration) ease;
+}
+
+/* Prevent jarring transitions on page load */
+@media (prefers-reduced-motion: no-preference) {
+  html:not(.no-transition) [data-theme] {
+    transition: all var(--transition-duration) ease;
+  }
+}
+
+/* Disable transitions during initial page load */
+.no-transition * {
+  transition: none !important;
+}
+/** Smooth transitions for common UI elements */
