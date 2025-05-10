@@ -83,7 +83,6 @@ const Navbar = () => {
             <RouterLink to="/">
               <h1 className="relative text-3xl text-indigo-600 dark:text-gray-50">
                 <span className="fugaz-one-regular ">Mehedi</span>
-
                 <span className="absolute -top-2 -right-[20px]">
                   <Sparkle size={18} />
                 </span>
@@ -118,15 +117,15 @@ const Navbar = () => {
                 </div>
               ))}
               <a
-                href="/resume.pdf"
-                download
+                href="./my_resume.pdf"
+                // download="Mehedi_Resume.pdf"
+                target="_blank"
                 className="inline-flex items-center px-4 py-2 border border-transparent text-sm font-medium rounded-md text-white bg-indigo-600 hover:bg-indigo-700"
               >
                 <FileDown className="w-4 h-4 mr-2" />
                 Resume
               </a>
 
-              {/* // */}
               <div className="ml-3">
                 <label className="swap swap-rotate">
                   <input
@@ -135,7 +134,6 @@ const Navbar = () => {
                     onChange={toggleTheme}
                     checked={theme === "dark"}
                   />
-
                   <p className="swap-off h-10 w-10 fill-current flex items-center justify-center text-black">
                     <MdSunny size={28} />
                   </p>
@@ -144,7 +142,6 @@ const Navbar = () => {
                   </p>
                 </label>
               </div>
-              {/* // */}
             </div>
           </div>
 
@@ -163,7 +160,6 @@ const Navbar = () => {
         </div>
       </div>
 
-      {/* Mobile menu */}
       {isOpen && (
         <motion.div
           initial={{ opacity: 0, y: -20 }}
@@ -199,14 +195,14 @@ const Navbar = () => {
               </div>
             ))}
             <a
-              href="/resume.pdf"
-              download
+              href="./my_resume.pdf"
+              // download="Mehedi_Resume.pdf"
+              target="_blank"
               className="inline-flex items-center px-4 py-2 border border-transparent text-sm font-medium rounded-md text-white bg-indigo-600 hover:bg-indigo-700 w-full justify-center"
             >
               <FileDown className="w-4 h-4 mr-2" />
               Resume
             </a>
-            {/* // */}
             <div className="ml-3 flex items-center mt-3 gap-3">
               <p>Dark Mode </p>
               <label className="swap swap-rotate">
@@ -216,7 +212,6 @@ const Navbar = () => {
                   onChange={toggleTheme}
                   checked={theme === "dark"}
                 />
-
                 <p className="swap-off h-10 w-10 fill-current flex items-center justify-center text-black">
                   <MdSunny size={26} />
                 </p>
@@ -225,7 +220,6 @@ const Navbar = () => {
                 </p>
               </label>
             </div>
-            {/* // */}
           </div>
         </motion.div>
       )}

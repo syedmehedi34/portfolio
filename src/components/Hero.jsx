@@ -1,5 +1,12 @@
 import { motion } from "framer-motion";
-import { Github, Linkedin, Mail, Facebook, FileDown } from "lucide-react";
+import {
+  Github,
+  Linkedin,
+  Mail,
+  Facebook,
+  FileDown,
+  MessageCircleCode,
+} from "lucide-react"; // Added Phone icon
 import photo from "/my-photo.jpeg";
 import { Typewriter } from "react-simple-typewriter";
 
@@ -7,7 +14,7 @@ const Hero = () => {
   return (
     <section
       id="home"
-      className="flex items-center  pt-32 pb-10  bg-gray-50 dark:bg-gray-800"
+      className="flex items-center pt-32 pb-10 bg-gray-50 dark:bg-gray-800"
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
@@ -17,8 +24,7 @@ const Hero = () => {
             transition={{ duration: 0.5 }}
           >
             <h2 className="text-4xl font-bold text-gray-900 dark:text-gray-50 mb-4">
-              Hi, I&apos;m{" "}
-              {/* <span className="text-indigo-600">Syed Mehedi Hasan</span> */}
+              Hi, I&apos;m
               <span className="text-indigo-600">
                 <Typewriter
                   words={["  Syed Mehedi Hasan"]}
@@ -70,9 +76,19 @@ const Hero = () => {
               >
                 <Mail className="w-7 h-7" />
               </a>
+              <a
+                href="https://wa.me/+8801731771438"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-[#25D366] hover:text-[#20b355]"
+              >
+                <MessageCircleCode className="w-7 h-7" />
+              </a>
             </div>
             <a
-              href="https://drive.google.com/uc?export=download&id=1z5w7Ya-Eyg2ykrAuwWx16Y_5QeRf7XLD"
+              // href="https://drive.google.com/uc?export=download&id=1z5w7Ya-Eyg2ykrAuwWx16Y_5QeRf7XLD"
+              href="./my_resume.pdf"
+              target="_blank"
               className="inline-flex items-center px-6 py-3 border border-transparent text-base font-medium rounded-md text-white bg-indigo-600 hover:bg-indigo-700"
             >
               <FileDown className="w-5 h-5 mr-2" />
