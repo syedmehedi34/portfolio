@@ -1,4 +1,10 @@
-import { Github, Linkedin, Mail, Facebook } from "lucide-react";
+import {
+  Github,
+  Linkedin,
+  Mail,
+  Facebook,
+  MessageCircleMore,
+} from "lucide-react";
 
 const Footer = () => {
   return (
@@ -8,8 +14,8 @@ const Footer = () => {
           <div>
             <h3 className="text-xl font-bold mb-4">Syed Mehedi Hasan</h3>
             <p className="text-gray-400">
-              Empowering innovation through technology and creativity. Let's
-              build something amazing together.
+              Empowering innovation through technology and creativity.
+              Let&apos;s build something amazing together.
             </p>
           </div>
           <div>
@@ -61,9 +67,18 @@ const Footer = () => {
               </a>
               <a
                 href="mailto:syedmehedi34@gmail.com"
+                target="_blank"
                 className="text-[#EA4335] hover:text-[#d33426]"
               >
                 <Mail className="w-6 h-6" />
+              </a>
+              <a
+                href="https://wa.me/+8801731771438"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-[#25D366] hover:text-[#20b355]"
+              >
+                <MessageCircleMore className="w-6 h-6" />
               </a>
             </div>
           </div>
