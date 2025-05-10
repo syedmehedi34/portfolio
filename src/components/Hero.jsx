@@ -5,7 +5,7 @@ import {
   Mail,
   Facebook,
   FileDown,
-  MessageCircleCode,
+  MessageCircleMore,
 } from "lucide-react"; // Added Phone icon
 import photo from "/my-photo.jpeg";
 import { Typewriter } from "react-simple-typewriter";
@@ -82,7 +82,7 @@ const Hero = () => {
                 rel="noopener noreferrer"
                 className="text-[#25D366] hover:text-[#20b355]"
               >
-                <MessageCircleCode className="w-7 h-7" />
+                <MessageCircleMore className="w-7 h-7" />
               </a>
             </div>
             <a
