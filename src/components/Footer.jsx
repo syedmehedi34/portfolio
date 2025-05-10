@@ -1,10 +1,5 @@
-import {
-  Github,
-  Linkedin,
-  Mail,
-  Facebook,
-  MessageCircleMore,
-} from "lucide-react";
+import { Github, Linkedin, Mail, Facebook } from "lucide-react";
+import { FaWhatsapp } from "react-icons/fa6";
 
 const Footer = () => {
   return (
@@ -78,7 +73,7 @@ const Footer = () => {
                 rel="noopener noreferrer"
                 className="text-[#25D366] hover:text-[#20b355]"
               >
-                <MessageCircleMore className="w-6 h-6" />
+                <FaWhatsapp className="w-6 h-6" />
               </a>
             </div>
           </div>

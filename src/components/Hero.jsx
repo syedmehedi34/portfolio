@@ -1,12 +1,7 @@
 import { motion } from "framer-motion";
-import {
-  Github,
-  Linkedin,
-  Mail,
-  Facebook,
-  FileDown,
-  MessageCircleMore,
-} from "lucide-react"; // Added Phone icon
+import { Github, Linkedin, Mail, Facebook, FileDown } from "lucide-react"; // Added Phone icon
+import { FaWhatsapp } from "react-icons/fa6";
+
 import photo from "/my-photo.jpeg";
 import { Typewriter } from "react-simple-typewriter";
 
@@ -82,7 +77,7 @@ const Hero = () => {
                 rel="noopener noreferrer"
                 className="text-[#25D366] hover:text-[#20b355]"
               >
-                <MessageCircleMore className="w-7 h-7" />
+                <FaWhatsapp className="w-7 h-7" />
               </a>
             </div>
             <a
