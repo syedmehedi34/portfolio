@@ -1,40 +1,105 @@
 import { useEffect, useState } from "react";
+import Marquee from "react-fast-marquee";
 import backgroundImage from "../assets/background-image.jpg";
 
 const Skills = () => {
   const [isPaused, setIsPaused] = useState(false);
 
-  const skillCategories = [
+  const skillsData = [
     {
       title: "Frontend",
-      skills: ["HTML", "CSS", "JavaScript", "ReactJS", "TailwindCSS"],
+      skills: [
+        {
+          name: "HTML",
+          logo: "https://img.icons8.com/?size=100&id=20909&format=png&color=000000",
+        },
+        {
+          name: "CSS",
+          logo: "https://img.icons8.com/?size=100&id=21278&format=png&color=000000",
+        },
+        {
+          name: "TailwindCSS",
+          logo: "https://img.icons8.com/?size=100&id=x7XMNGh2vdqA&format=png&color=000000",
+        },
+        {
+          name: "JavaScript",
+          logo: "https://img.icons8.com/?size=100&id=108784&format=png&color=000000",
+        },
+        {
+          name: "ReactJS",
+          logo: "https://img.icons8.com/?size=100&id=asWSSTBrDlTW&format=png&color=000000",
+        },
+      ],
     },
     {
       title: "Backend & APIs",
-      skills: ["Node.js", "ExpressJS", "MongoDB", "Firebase"],
+      skills: [
+        {
+          name: "Node.js",
+          logo: "https://img.icons8.com/?size=100&id=hsPbhkOH4FMe&format=png&color=000000",
+        },
+        {
+          name: "ExpressJS",
+          logo: "https://img.icons8.com/?size=100&id=2ZOaTclOqD4q&format=png&color=000000",
+        },
+        {
+          name: "MongoDB",
+          logo: "https://img.icons8.com/?size=100&id=tBBf3P8HL0vR&format=png&color=000000",
+        },
+        {
+          name: "Firebase",
+          logo: "https://img.icons8.com/?size=100&id=ROMfFZ1tMhpk&format=png&color=000000",
+        },
+      ],
     },
     {
       title: "Tools",
-      skills: ["Socket.IO", "GitHub", "VS Code", "Git"],
+      skills: [
+        {
+          name: "Socket.IO",
+          logo: "https://images.icon-icons.com/2389/PNG/512/socket_io_logo_icon_144874.png",
+        },
+        {
+          name: "GitHub",
+          logo: "https://img.icons8.com/?size=100&id=3tC9EQumUAuq&format=png&color=000000",
+        },
+        {
+          name: "VS Code",
+          logo: "https://img.icons8.com/?size=100&id=9OGIyU8hrxW5&format=png&color=000000",
+        },
+        {
+          name: "Git",
+          logo: "https://img.icons8.com/?size=100&id=20906&format=png&color=000000",
+        },
+      ],
     },
     {
       title: "State Management",
-      skills: ["Redux"],
+      skills: [
+        {
+          name: "Context API",
+          logo: "https://img.icons8.com/?size=100&id=asWSSTBrDlTW&format=png&color=000000",
+        },
+        {
+          name: "Redux",
+          logo: "https://img.icons8.com/?size=100&id=3VGtaw5gCc8T&format=png&color=000000",
+        },
+      ],
     },
   ];
 
-  // Handle prefers-reduced-motion
   useEffect(() => {
     const mediaQuery = window.matchMedia("(prefers-reduced-motion: reduce)");
-    if (mediaQuery.matches) {
-      setIsPaused(true);
-    }
+    setIsPaused(mediaQuery.matches);
+    const handleChange = (e) => setIsPaused(e.matches);
+    mediaQuery.addEventListener("change", handleChange);
+    return () => mediaQuery.removeEventListener("change", handleChange);
   }, []);
 
   return (
     <section
       id="skills"
-      className="py-20 relative min-h-screen text-white"
+      className="relative min-h-screen py-16 text-white"
       style={{
         backgroundImage: `url(${backgroundImage})`,
         backgroundAttachment: "fixed",
@@ -44,116 +109,52 @@ const Skills = () => {
       }}
       aria-labelledby="skills-heading"
     >
-      <div className="absolute inset-0 bg-purple-900 opacity-70"></div>
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center relative z-10">
+      <div className="absolute inset-0 bg-blue-950/70"></div>
+      <div className="relative z-10 mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 text-center">
         <h2
           id="skills-heading"
-          className="text-4xl font-bold mb-12 text-indigo-100"
+          className="mb-8 text-3xl font-bold text-indigo-100"
         >
           My Skills
         </h2>
-        <p className="mb-8 text-lg text-indigo-200 max-w-2xl mx-auto">
-          I craft dynamic, scalable web apps with the MERN stack, all showcased
-          in my portfolio projects.
+        <p className="mb-10 max-w-xl mx-auto text-base text-indigo-200">
+          Crafting dynamic, scalable web apps with the MERN stack, showcased in
+          my portfolio.
         </p>
-        <div className="overflow-hidden">
-          <div
-            className="flex whitespace-nowrap"
-            style={{
-              animation: isPaused ? "none" : "marquee 15s linear infinite",
-              willChange: "transform",
-              display: "flex",
-            }}
-            onMouseEnter={(e) =>
-              (e.currentTarget.style.animationPlayState = "paused")
-            }
-            onMouseLeave={(e) =>
-              (e.currentTarget.style.animationPlayState = isPaused
-                ? "paused"
-                : "running")
-            }
-            role="marquee"
-            aria-live="off"
-          >
-            {skillCategories.map((category, index) => (
-              <div
-                key={`${category.title}-${index}`}
-                className="flex-shrink-0 mx-4 w-64 sm:w-72 lg:w-80"
-              >
-                <div className="bg-indigo-900 bg-opacity-80 rounded-lg p-6 hover:bg-opacity-90 transition-all duration-300">
-                  <h3 className="text-xl font-semibold mb-4 text-indigo-100">
-                    {category.title}
-                  </h3>
-                  <ul
-                    className="flex flex-wrap gap-2"
-                    aria-label={`${category.title} skills`}
-                  >
-                    {category.skills.map((skill, skillIndex) => (
-                      <li
-                        key={skillIndex}
-                        className="px-3 py-1 bg-indigo-700 bg-opacity-70 rounded-md text-sm text-indigo-100"
-                      >
-                        {skill}
-                      </li>
-                    ))}
-                  </ul>
-                </div>
+        <Marquee speed={20} pauseOnHover gradient={false} play={!isPaused}>
+          {skillsData.map((category, index) => (
+            <div
+              key={`${category.title}-${index}`}
+              className="mx-3 w-60 sm:w-64 lg:w-72"
+            >
+              <div className="bg-indigo-900/80 p-5 rounded-lg shadow-md hover:bg-indigo-900/90 transition-all duration-300">
+                <h3 className="mb-3 text-lg font-semibold text-indigo-100">
+                  {category.title}
+                </h3>
+                <ul
+                  className="flex flex-wrap gap-2"
+                  aria-label={`${category.title} skills`}
+                >
+                  {category.skills.map((skill, skillIndex) => (
+                    <li
+                      key={skillIndex}
+                      className="flex items-center space-x-1.5 rounded-md bg-indigo-800/90 px-2 py-1 text-xs text-indigo-100"
+                    >
+                      <img
+                        src={skill.logo}
+                        alt={`${skill.name} logo`}
+                        className="h-4 w-4 object-contain"
+                        loading="lazy"
+                      />
+                      <span>{skill.name}</span>
+                    </li>
+                  ))}
+                </ul>
               </div>
-            ))}
-            {skillCategories.map((category, index) => (
-              <div
-                key={`duplicate-${category.title}-${index}`}
-                className="flex-shrink-0 mx-4 w-64 sm:w-72 lg:w-80"
-              >
-                <div className="bg-indigo-900 bg-opacity-80 rounded-lg p-6 hover:bg-opacity-90 transition-all duration-300">
-                  <h3 className="text-xl font-semibold mb-4 text-indigo-100">
-                    {category.title}
-                  </h3>
-                  <ul
-                    className="flex flex-wrap gap-2"
-                    aria-label={`${category.title} skills`}
-                  >
-                    {category.skills.map((skill, skillIndex) => (
-                      <li
-                        key={skillIndex}
-                        className="px-3 py-1 bg-indigo-700 bg-opacity-70 rounded-md text-sm text-indigo-100"
-                      >
-                        {skill}
-                      </li>
-                    ))}
-                  </ul>
-                </div>
-              </div>
-            ))}
-          </div>
-        </div>
+            </div>
+          ))}
+        </Marquee>
       </div>
-      <style>{`
-        @keyframes marquee {
-          0% {
-            transform: translateX(0);
-          }
-          100% {
-            transform: translateX(-50%);
-          }
-        }
-        @media (max-width: 640px) {
-          .w-64 {
-            width: 80%;
-          }
-          div[role="marquee"] {
-            animation-duration: 10s;
-          }
-        }
-        @media (min-width: 641px) and (max-width: 1024px) {
-          .w-72 {
-            width: 48%;
-          }
-          div[role="marquee"] {
-            animation-duration: 12s;
-          }
-        }
-      `}</style>
     </section>
   );
 };
