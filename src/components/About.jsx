@@ -2,13 +2,16 @@
 import { motion } from "framer-motion";
 import photo from "/my-photo.jpeg";
 import aboutTextLottie from "../../public/aboutTextLottie.json";
+import Lottie from "react-lottie";
 
 const About = () => {
   return (
     <>
+      {/* top bar of the about page here */}
       <section className="border-b-1 border-t-1 border-white bg-black">
         <div className="text-center">Mehedi</div>
       </section>
+
       <section
         id="about"
         className="py-20 relative min-h-screen"
@@ -54,10 +57,24 @@ const About = () => {
             }}
           >
             <div className="flex flex-col md:flex-row gap-8 items-center">
-              <div className="md:w-1/2">
-                <h2 className="text-lg font-semibold text-cyan-400 mb-2">
-                  ABOUT
-                </h2>
+              {/* //* div for left items  */}
+              <div className="md:w-1/2 flex flex-col items-start">
+                <div className="">
+                  <Lottie
+                    options={{
+                      loop: true,
+                      autoplay: true,
+                      animationData: aboutTextLottie,
+                      rendererSettings: {
+                        preserveAspectRatio: "xMidYMid slice",
+                      },
+                    }}
+                    height={60}
+                    width={140}
+                    isClickToPauseDisabled={true}
+                    style={{ marginBottom: "1rem" }}
+                  />
+                </div>
                 <h3 className="text-3xl md:text-4xl font-bold text-white mb-6">
                   Hey there! I'm Jasmin, a MERN stack Developer from Bangladesh
                 </h3>
@@ -92,6 +109,8 @@ const About = () => {
                   My Projects
                 </a>
               </div>
+
+              {/* //* div for right items  */}
               <div className="md:w-1/2 flex flex-col items-center">
                 <motion.div
                   initial={{ opacity: 0, x: 50 }}
@@ -126,6 +145,11 @@ const About = () => {
             </div>
           </motion.div>
         </div>
+      </section>
+
+      {/* bottom bar of the about page here */}
+      <section className="border-b-1 border-t-1 border-white bg-black">
+        <div className="text-center">Mehedi</div>
       </section>
     </>
   );
