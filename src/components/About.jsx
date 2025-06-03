@@ -55,14 +55,14 @@ const About = () => {
         }}
       >
         {/* Purple Overlay */}
-        <div className="absolute inset-0 bg-purple-900 opacity-70" />
+        <div className="absolute inset-0 bg-blue-950 opacity-70" />
 
         {/* Decorative SVG Waves */}
         <div className="absolute inset-0 opacity-20 pointer-events-none">
           <svg
             className="h-full w-full"
             xmlns="http://www.w3.org/2000/svg"
-            viewBox="0 1440 800"
+            // viewBox="0 1440 800"
           >
             <path
               d="M0,400 C200,600 400,200 600,400 C800,600 1000,200 1200,400 C1400,600 1600,200 1440,400 L1440,800 L0,800 Z"
