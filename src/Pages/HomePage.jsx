@@ -1,5 +1,5 @@
 import About from "../components/About";
-import Education from "../components/Education";
+// import Education from "../components/Education";
 import Hero from "../components/Hero";
 import Skills from "../components/Skills";
 import Projects from "../components/Projects";
@@ -11,7 +11,7 @@ const HomePage = () => {
       <Hero />
       <About />
       <Skills />
-      <Education />
+      {/* <Education /> */}
       <Projects />
       <Contact />
     </div>
