@@ -18,16 +18,16 @@ const Skills = () => {
           logo: "https://api.iconify.design/vscode-icons:file-type-css.svg?color=%23ffffff",
         },
         {
-          name: "TailwindCSS",
-          logo: "https://api.iconify.design/vscode-icons:file-type-tailwind.svg?color=%23ffffff",
-        },
-        {
           name: "JavaScript",
           logo: "https://api.iconify.design/vscode-icons:file-type-js-official.svg?color=%23ffffff",
         },
         {
           name: "ReactJS",
           logo: "https://api.iconify.design/vscode-icons:file-type-reactjs.svg?color=%23ffffff",
+        },
+        {
+          name: "TailwindCSS",
+          logo: "https://api.iconify.design/vscode-icons:file-type-tailwind.svg?color=%23ffffff",
         },
       ],
     },
@@ -124,25 +124,25 @@ const Skills = () => {
           {skillsData.map((category, index) => (
             <div
               key={`${category.title}-${index}`}
-              className="mx-3 w-60 sm:w-64 lg:w-72"
+              className="max-w-[320px] mx-4"
             >
-              <div className="bg-cyan-800/10 p-5 rounded-lg backdrop-blur-xs hover:bg-indigo-900/90 transition-all duration-300 h-56">
-                <h3 className="mb-3 text-lg font-semibold text-indigo-100">
+              <div className="bg-cyan-100/5 px-8 py-6 rounded-xl backdrop-blur-xs h-62 border border-cyan-100/20">
+                <h3 className="mb-4 text-[18px] font-bold text-white text-left">
                   {category.title}
                 </h3>
                 <ul
-                  className="flex flex-wrap gap-2"
+                  className="flex flex-wrap space-x-3 space-y-2"
                   aria-label={`${category.title} skills`}
                 >
                   {category.skills.map((skill, skillIndex) => (
                     <li
                       key={skillIndex}
-                      className="flex items-center space-x-1.5 rounded-md bg-indigo-800/90 px-2 py-1 text-xs text-indigo-100"
+                      className="flex items-center  space-x-1.5 pl-2 pr-3 text-sm text-white h-11 rounded-lg bg-cyan-100/10 hover:bg-cyan-100/20 transition-colors duration-200"
                     >
                       <img
                         src={skill.logo}
                         alt={`${skill.name} logo`}
-                        className="h-4 w-4 object-contain"
+                        className="h-7 w-7 object-contain"
                         loading="lazy"
                       />
                       <span>{skill.name}</span>
