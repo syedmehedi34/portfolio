@@ -98,7 +98,7 @@ const Skills = () => {
   return (
     <section
       id="skills"
-      className="relative min-h-screen py-16 text-white"
+      className="relative pt-16 pb-24 text-white"
       style={{
         backgroundImage: `url(${backgroundImage})`,
         backgroundAttachment: "fixed",
