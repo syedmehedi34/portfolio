@@ -120,7 +120,7 @@ const Skills = () => {
           Crafting dynamic, scalable web apps with the MERN stack, showcased in
           my portfolio.
         </p>
-        <Marquee speed={20} pauseOnHover gradient={false} play={!isPaused}>
+        <Marquee speed={30} pauseOnHover gradient={false} play={!isPaused}>
           {skillsData.map((category, index) => (
             <div
               key={`${category.title}-${index}`}
