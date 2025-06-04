@@ -11,23 +11,23 @@ const Skills = () => {
       skills: [
         {
           name: "HTML",
-          logo: "https://img.icons8.com/?size=100&id=20909&format=png&color=000000",
+          logo: "https://api.iconify.design/vscode-icons:file-type-html.svg?color=%23ffffff",
         },
         {
           name: "CSS",
-          logo: "https://img.icons8.com/?size=100&id=21278&format=png&color=000000",
+          logo: "https://api.iconify.design/vscode-icons:file-type-css.svg?color=%23ffffff",
         },
         {
           name: "TailwindCSS",
-          logo: "https://img.icons8.com/?size=100&id=x7XMNGh2vdqA&format=png&color=000000",
+          logo: "https://api.iconify.design/vscode-icons:file-type-tailwind.svg?color=%23ffffff",
         },
         {
           name: "JavaScript",
-          logo: "https://img.icons8.com/?size=100&id=108784&format=png&color=000000",
+          logo: "https://api.iconify.design/vscode-icons:file-type-js-official.svg?color=%23ffffff",
         },
         {
           name: "ReactJS",
-          logo: "https://img.icons8.com/?size=100&id=asWSSTBrDlTW&format=png&color=000000",
+          logo: "https://api.iconify.design/vscode-icons:file-type-reactjs.svg?color=%23ffffff",
         },
       ],
     },
@@ -36,19 +36,19 @@ const Skills = () => {
       skills: [
         {
           name: "Node.js",
-          logo: "https://img.icons8.com/?size=100&id=hsPbhkOH4FMe&format=png&color=000000",
+          logo: "https://api.iconify.design/vscode-icons:file-type-node.svg?color=%23ffffff",
         },
         {
           name: "ExpressJS",
-          logo: "https://img.icons8.com/?size=100&id=2ZOaTclOqD4q&format=png&color=000000",
+          logo: "https://api.iconify.design/simple-icons:express.svg?color=%23ffffff",
         },
         {
           name: "MongoDB",
-          logo: "https://img.icons8.com/?size=100&id=tBBf3P8HL0vR&format=png&color=000000",
+          logo: "https://api.iconify.design/vscode-icons:file-type-mongo.svg?color=%23ffffff",
         },
         {
           name: "Firebase",
-          logo: "https://img.icons8.com/?size=100&id=ROMfFZ1tMhpk&format=png&color=000000",
+          logo: "https://api.iconify.design/simple-icons:firebase.svg?color=%23ffffff",
         },
       ],
     },
@@ -57,19 +57,19 @@ const Skills = () => {
       skills: [
         {
           name: "Socket.IO",
-          logo: "https://images.icon-icons.com/2389/PNG/512/socket_io_logo_icon_144874.png",
+          logo: "https://api.iconify.design/simple-icons:socketdotio.svg?color=%23ffffff",
         },
         {
           name: "GitHub",
-          logo: "https://img.icons8.com/?size=100&id=3tC9EQumUAuq&format=png&color=000000",
+          logo: "https://api.iconify.design/simple-icons:github.svg?color=%23ffffff",
         },
         {
           name: "VS Code",
-          logo: "https://img.icons8.com/?size=100&id=9OGIyU8hrxW5&format=png&color=000000",
+          logo: "https://api.iconify.design/vscode-icons:file-type-vscode.svg?color=%23ffffff",
         },
         {
           name: "Git",
-          logo: "https://img.icons8.com/?size=100&id=20906&format=png&color=000000",
+          logo: "https://api.iconify.design/simple-icons:git.svg?color=%23ffffff",
         },
       ],
     },
@@ -78,16 +78,15 @@ const Skills = () => {
       skills: [
         {
           name: "Context API",
-          logo: "https://img.icons8.com/?size=100&id=asWSSTBrDlTW&format=png&color=000000",
+          logo: "https://api.iconify.design/vscode-icons:file-type-reactjs.svg?color=%23ffffff", // No distinct Context API logo; reusing React logo
         },
         {
           name: "Redux",
-          logo: "https://img.icons8.com/?size=100&id=3VGtaw5gCc8T&format=png&color=000000",
+          logo: "https://api.iconify.design/simple-icons:redux.svg?color=%23ffffff",
         },
       ],
     },
   ];
-
   useEffect(() => {
     const mediaQuery = window.matchMedia("(prefers-reduced-motion: reduce)");
     setIsPaused(mediaQuery.matches);
@@ -127,7 +126,7 @@ const Skills = () => {
               key={`${category.title}-${index}`}
               className="mx-3 w-60 sm:w-64 lg:w-72"
             >
-              <div className="bg-indigo-900/80 p-5 rounded-lg shadow-md hover:bg-indigo-900/90 transition-all duration-300">
+              <div className="bg-cyan-800/10 p-5 rounded-lg backdrop-blur-xs hover:bg-indigo-900/90 transition-all duration-300 h-56">
                 <h3 className="mb-3 text-lg font-semibold text-indigo-100">
                   {category.title}
                 </h3>

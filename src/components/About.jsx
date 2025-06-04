@@ -40,10 +40,10 @@ const About = () => {
   return (
     <>
       {/* Top Bar */}
-      <section className="bg-black py-4 border-y border-white">
-        <div className="text-center text-white text-lg font-semibold">
-          About Mehedi
-        </div>
+      <section className="bg-[#111] border-y border-white py-8 flex items-center justify-around text-white uppercase text-4xl font-semibold">
+        <p>Fast Learner</p>
+        <p>Team Work</p>
+        <p>Details Master</p>
       </section>
 
       {/* Main Section with Fixed Background */}
@@ -55,43 +55,23 @@ const About = () => {
         }}
       >
         {/* Purple Overlay */}
-        <div className="absolute inset-0 bg-blue-950 opacity-70" />
-
-        {/* Decorative SVG Waves */}
-        <div className="absolute inset-0 opacity-20 pointer-events-none">
-          <svg
-            className="h-full w-full"
-            xmlns="http://www.w3.org/2000/svg"
-            // viewBox="0 1440 800"
-          >
-            <path
-              d="M0,400 C200,600 400,200 600,400 C800,600 1000,200 1200,400 C1400,600 1600,200 1440,400 L1440,800 L0,800 Z"
-              fill="none"
-              stroke="#8a4af3"
-              strokeWidth="2"
-            />
-            <path
-              d="M0,300 C150,500 350,100 550,300 C750,500 950,100 1150,300 C1350,500 1550,100 1440,300 L1440,800 L0,800 Z"
-              fill="none"
-              stroke="#8a4af3"
-              strokeWidth="2"
-            />
-          </svg>
-        </div>
+        <div className="absolute inset-0 bg-cyan-950 opacity-70" />
 
         {/* Main Content */}
         <div className="relative z-10 mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <motion.div {...fadeInUp}>
-            <div className="flex flex-col md:flex-row items-center gap-8">
+            <div className="flex flex-col md:flex-row items-center gap-20">
               {/* Left Section: Text and Lottie Animation */}
               <div className="md:w-1/2 text-center md:text-left">
-                <Lottie
-                  options={lottieOptions}
-                  height={60}
-                  width={140}
-                  isClickToPauseDisabled
-                  style={{ marginBottom: "1rem" }}
-                />
+                <div className="md:w-fit w-full">
+                  <Lottie
+                    options={lottieOptions}
+                    height={60}
+                    width={140}
+                    isClickToPauseDisabled
+                    style={{ marginBottom: "1rem" }}
+                  />
+                </div>
                 <h3 className="mb-4 text-3xl md:text-4xl font-bold text-white">
                   Hey there! I'm Mehedi, a MERN Stack Developer
                 </h3>
@@ -111,7 +91,7 @@ const About = () => {
                 </motion.p>
                 <a
                   href="#projects"
-                  className="inline-block rounded-md bg-indigo-600 px-6 py-3 text-white hover:bg-indigo-700"
+                  className="inline-block rounded-full bg-cyan-600 px-6 py-3 text-white hover:bg-cyan-700"
                 >
                   My Projects
                 </a>
@@ -122,34 +102,37 @@ const About = () => {
                 {...slideInRight}
                 className="md:w-1/2 flex justify-center"
               >
-                <div className="relative h-96 w-72">
+                <div className="relative h-[480px] w-[350px]">
                   {/* Green Background Layer */}
                   <div
-                    className="absolute h-full w-full rounded-lg bg-green-500 shadow-lg"
+                    className="absolute h-full w-full rounded-lg bg-cyan-800/60 shadow-lg"
                     style={{
-                      clipPath: "polygon(0 5%, 85% 0%, 75% 95%, 5% 100%)",
+                      clipPath: "polygon(2% 16%, 98% 7%, 75% 95%, 7% 98%)",
                     }}
                   />
                   {/* Image Container */}
                   <div
                     className="absolute h-full w-full overflow-hidden rounded-lg"
                     style={{
-                      clipPath: "polygon(5% 10%, 80% 5%, 70% 90%, 10% 95%)",
+                      clipPath: "polygon(11% 1%, 95% 1%, 80% 92%, 11% 92%)",
                     }}
                   >
                     <img
                       src={photo}
                       alt="Mehedi Hasan"
-                      className="h-full w-full object-cover"
+                      className="h-full w-full object-cover opacity80 brightness-65"
                     />
                     {/* Gradient Overlay */}
                     <div className="absolute inset-0 bg-gradient-to-t from-black/40 to-transparent rounded-lg" />
                     {/* Text Overlay */}
-                    <div className="absolute bottom-4 left-4 text-white">
-                      <h4 className="text-lg font-semibold">
+                    <div className="absolute bottom-20 left-12 text-white">
+                      <h4 className="text-xl font-bold">
                         MERN Stack Expertise
                       </h4>
-                      <p className="text-sm">Scalable web apps with MERN</p>
+                      <p className="text-sm mt-2">
+                        Building scalable web apps with <br /> MongoDB,
+                        Express.js, React, <br /> and Node.js
+                      </p>
                     </div>
                   </div>
                 </div>
