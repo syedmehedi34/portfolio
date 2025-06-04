@@ -1,3 +1,4 @@
+/* eslint-disable react/no-unknown-property */
 /* eslint-disable react/no-unescaped-entities */
 import { motion } from "framer-motion";
 import Lottie from "react-lottie";
@@ -89,12 +90,31 @@ const About = () => {
                   and solving challenges. When not coding, I explore new tech,
                   play sports, or spend time with family.
                 </motion.p>
-                <a
-                  href="#projects"
-                  className="inline-block rounded-full bg-cyan-600 px-6 py-3 text-white hover:bg-cyan-700"
-                >
-                  My Projects
-                </a>
+                <>
+                  <a
+                    href="#projects"
+                    className="inline-block rounded-full bg-cyan-600 px-6 py-3 text-white hover:bg-cyan-700"
+                    style={{
+                      boxShadow:
+                        "0 0 10px rgba(6, 182, 212, 0.4), 0 0 20px rgba(6, 182, 212, 0.5)",
+                      animation: "glow 1.5s ease-in-out infinite alternate",
+                    }}
+                  >
+                    My Projects
+                  </a>
+                  <style jsx>{`
+                    @keyframes glow {
+                      from {
+                        box-shadow: 0 0 10px rgba(6, 182, 212, 0.4),
+                          0 0 20px rgba(6, 182, 212, 0.5);
+                      }
+                      to {
+                        box-shadow: 0 0 20px rgba(6, 182, 212, 0.85),
+                          0 0 30px rgba(6, 182, 212, 0.5);
+                      }
+                    }
+                  `}</style>
+                </>
               </div>
 
               {/* Right Section: Profile Image with Clip Path */}
