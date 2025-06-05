@@ -34,7 +34,7 @@ const Projects = () => {
           {projects.map((project, index) => (
             <div
               key={index}
-              className="bg-cyan-50/10  rounded-2xl shadow-xl hover:shadow-2xl transition-shadow duration-300 overflow-hidden border border-cyan-100/20 backdrop-blur-sm max-w-7xl mx-auto p-10"
+              className="bg-cyan-50/10  rounded-2xl shadow-xl hover:shadow-2xl transition-shadow duration-300 overflow-hidden border border-cyan-100/20 backdrop-blur-sm max-w-4xl mx-auto p-10"
             >
               <div className="flex flex-col lg:flex-row">
                 {/* Content Section (Left) */}
