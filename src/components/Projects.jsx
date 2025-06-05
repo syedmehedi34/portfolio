@@ -1,157 +1,106 @@
-import { motion } from "framer-motion";
 import { Github, ExternalLink, ArrowRight } from "lucide-react";
 import { Link } from "react-router";
 import { projects } from "../Data/ProjectsData";
-
-const containerVariants = {
-  hidden: { opacity: 0 },
-  visible: {
-    opacity: 1,
-    transition: {
-      staggerChildren: 0.3,
-    },
-  },
-};
-
-const cardVariants = {
-  hidden: {
-    opacity: 0,
-    y: 50,
-    scale: 0.9,
-    rotateX: -15,
-  },
-  visible: {
-    opacity: 1,
-    y: 0,
-    scale: 1,
-    rotateX: 0,
-    transition: {
-      type: "spring",
-      stiffness: 100,
-      damping: 12,
-      duration: 0.6,
-    },
-  },
-};
+import backgroundImage from "../assets/background-image.jpg";
 
 const Projects = () => {
   return (
-    <section id="projects" className="py-20 bg-gray-50 dark:bg-gray-800">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <motion.div
-          initial="hidden"
-          whileInView="visible"
-          viewport={{ once: false, amount: 0.2 }}
-          variants={containerVariants}
+    <section
+      id="projects"
+      className="relative py-24 text-white"
+      style={{
+        backgroundImage: `url(${backgroundImage})`,
+        backgroundAttachment: "fixed",
+        backgroundPosition: "center",
+        backgroundSize: "cover",
+        backgroundRepeat: "no-repeat",
+      }}
+      aria-labelledby="projects-heading"
+    >
+      <div className="absolute inset-0 bg-blue-950/70"></div>
+
+      {/* main content  */}
+      <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        {/* Title */}
+        <h2
+          id="projects-heading"
+          className="text-5xl font-extrabold text-center text-indigo-100 mb-20 tracking-tight"
         >
-          {/* title  */}
-          <motion.h2
-            className="text-3xl font-bold text-center text-gray-900 dark:text-gray-50 mb-12"
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: false }}
-            transition={{ duration: 0.5 }}
-          >
-            Projects
-          </motion.h2>
+          My Projects
+        </h2>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {projects.map((project, index) => (
-              <motion.div
-                key={index}
-                variants={cardVariants}
-                whileHover={{
-                  y: -10,
-                  scale: 1.02,
-                  transition: { duration: 0.3 },
-                }}
-                className="bg-white dark:bg-gray-600 rounded-xl  shadow-lg hover:shadow-2xl transition-all duration-300 transform perspective-1000 flex flex-col overflow-hidden"
-              >
-                {/* project image  */}
-                <div className="relative overflow-hidden">
-                  <motion.img
-                    src={project.image}
-                    alt={project.title}
-                    whileHover={{ scale: 1.05 }}
-                    transition={{ duration: 0.3 }}
-                    className="w-full h-48 object-cover"
-                  />
-                </div>
+        {/* Projects Single Column */}
+        <div className="space-y-12">
+          {projects.map((project, index) => (
+            <div
+              key={index}
+              className="bg-cyan-50/10  rounded-2xl shadow-xl hover:shadow-2xl transition-shadow duration-300 overflow-hidden border border-cyan-100/20 backdrop-blur-sm max-w-7xl mx-auto p-10"
+            >
+              <div className="flex flex-col lg:flex-row">
+                {/* Content Section (Left) */}
+                <div className="pr-8 flex-1 flex flex-col">
+                  <h3 className="text-3xl font-bold text-white mb-5">
+                    {project.title}
+                  </h3>
+                  <p className="text-indigo-200 text-lg mb-8 leading-relaxed">
+                    {project.description}
+                  </p>
 
-                {/* project description body  */}
-                <div className="p-6 flex-1 flex flex-col justify-between">
-                  <div>
-                    <h3 className="text-xl font-semibold text-gray-900 dark:text-gray-50 mb-2">
-                      {project.title}
-                    </h3>
-
-                    <p className="text-gray-600 dark:text-gray-200 mb-4 text-sm ">
-                      {project.description}
-                    </p>
-
-                    {/* technologies  */}
-                    <div className="flex  flex-wrap gap-2 mb-4">
-                      {project.technologies.map((tech) => (
-                        <motion.span
-                          key={tech}
-                          whileHover={{
-                            scale: 1.1,
-                            // rotate: [-5, 5, 0],
-                            transition: { duration: 0.3 },
-                          }}
-                          className="px-3 py-1 bg-indigo-100 text-indigo-600 rounded-full text-sm font-medium"
-                        >
-                          {tech}
-                        </motion.span>
-                      ))}
-                    </div>
+                  {/* Technologies */}
+                  <div className="flex flex-wrap gap-3 mb-8">
+                    {project.technologies.map((tech) => (
+                      <span
+                        key={tech}
+                        className="px-5 py-2 bg-cyan-100/10 dark:bg-cyan-900/20 text-indigo-100 rounded-full text-sm font-semibold tracking-wide"
+                      >
+                        {tech}
+                      </span>
+                    ))}
                   </div>
 
-                  {/* buttons  */}
-                  <div className="flex space-x-4 ">
-                    <motion.a
-                      whileHover={{ scale: 1.1, y: -2 }}
-                      whileTap={{ scale: 0.95 }}
+                  {/* Links */}
+                  <div className="flex items-center gap-8">
+                    <a
                       href={project.github}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="flex items-center text-gray-600 dark:text-gray-50 hover:text-indigo-600 transition-colors duration-300 text-sm"
+                      className="flex items-center text-indigo-200 hover:text-indigo-400 text-base font-medium transition-colors duration-200"
                     >
-                      <Github className="w-5 h-5 mr-1" />
-                      Code
-                    </motion.a>
-                    <motion.a
-                      whileHover={{ scale: 1.1, y: -2 }}
-                      whileTap={{ scale: 0.95 }}
+                      <Github className="w-6 h-6 mr-2" />
+                      View Code
+                    </a>
+                    <a
                       href={project.live}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="flex items-center text-gray-600 dark:text-gray-50 hover:text-indigo-600 transition-colors duration-300"
+                      className="flex items-center text-indigo-200 hover:text-indigo-400 text-base font-medium transition-colors duration-200"
                     >
-                      <ExternalLink className="w-5 h-5 mr-1" />
+                      <ExternalLink className="w-6 h-6 mr-2" />
                       Live Demo
-                    </motion.a>
-                    <div className="flex-1"></div>
-
-                    <Link to={`/projects/${project.id}`}>
-                      <motion.p
-                        whileHover={{ scale: 1.1, y: -2 }}
-                        whileTap={{ scale: 0.95 }}
-                        href={project.github}
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        className="inline-flex items-center px-4 py-2 bg-indigo-600 text-white text-sm rounded-full hover:bg-indigo-700 transition-colors duration-300"
-                      >
-                        Explore
-                        <ArrowRight className="w-4 h-4 ml-2" />
-                      </motion.p>
+                    </a>
+                    <div className="flex-1" />
+                    <Link
+                      to={`/projects/${project.id}`}
+                      className="inline-flex items-center px-6 py-3 bg-indigo-600 text-white text-base font-semibold rounded-lg hover:bg-indigo-500 transition-colors duration-200 shadow-md"
+                    >
+                      Explore Project
+                      <ArrowRight className="w-5 h-5 ml-3" />
                     </Link>
                   </div>
                 </div>
-              </motion.div>
-            ))}
-          </div>
-        </motion.div>
+
+                {/* Scrollable Project Image (Right) */}
+                <div className="lg:w-1/3 w-full h-96 overflow-y-auto lg:rounded-r-2xl scrollbar-thin scrollbar-thumb-indigo-400 scrollbar-track-cyan-100/10 dark:scrollbar-track-gray-800">
+                  <img
+                    src={project.image}
+                    alt={project.title}
+                    className="w-full h-auto object-cover"
+                  />
+                </div>
+              </div>
+            </div>
+          ))}
+        </div>
       </div>
     </section>
   );

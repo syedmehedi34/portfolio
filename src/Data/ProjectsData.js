@@ -1,3 +1,5 @@
+import assetFlow_image_1 from "../assets/asset_flow_1.png";
+
 export const projects = [
   {
     id: "asset-flow",
@@ -6,7 +8,8 @@ export const projects = [
       "AssetFlow is a web app for managing company assets, allowing HR managers to assign, track, and report on returnable and non-returnable assets. Employees can request and return assets, while the system automates notifications and subscription management for improved efficiency.",
     fullDescription:
       "AssetFlow is a web app for managing company assets, allowing HR managers to assign, track, and report on returnable and non-returnable assets. Employees can request and return assets, while the system automates notifications and subscription management for improved efficiency.",
-    image: "https://i.ibb.co.com/tMq7rJZW/asset-flow.png",
+    // image: "https://i.ibb.co.com/tMq7rJZW/asset-flow.png",
+    image: assetFlow_image_1,
     technologies: [
       "React",
       "Tailwind CSS",
