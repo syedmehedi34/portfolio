@@ -63,7 +63,9 @@ const Navbar = () => {
       initial={{ y: -100 }}
       animate={{ y: 0 }}
       className={`fixed w-full z-50 transition-all duration-300 ${
-        isScrolled ? "bg-cyan-950 bg-opacity-70 shadow-lg" : "bg-transparent"
+        isScrolled
+          ? "bg-cyan-950/30 backdrop-blur-md border-y border-white/20 shadow-lg"
+          : "bg-transparent"
       }`}
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -139,9 +141,9 @@ const Navbar = () => {
         <motion.div
           initial={{ opacity: 0, y: -20 }}
           animate={{ opacity: 1, y: 0 }}
-          className="md:hidden bg-cyan-950 bg-opacity-70"
+          className="md:hidden bg-cyan-950/30 backdrop-blur-md border border-white/20 shadow-lg"
         >
-          <div className="px-2 pt-2 pb-3 space-y-1 sm:px-3 shadow-2xl">
+          <div className="px-2 pt-2 pb-3 space-y-1 sm:px-3">
             {navItems.map((item) => (
               <div key={item} className="relative">
                 <ScrollLink
