@@ -1,7 +1,7 @@
 import { useState, useEffect } from "react";
 import { Link as ScrollLink } from "react-scroll";
 import { Link as RouterLink } from "react-router-dom";
-import { Menu, X, FileDown, Sparkle } from "lucide-react";
+import { Menu, X, FileDown, Sparkle, ArrowDownRight } from "lucide-react";
 import { motion } from "framer-motion";
 
 const Navbar = () => {
@@ -64,7 +64,7 @@ const Navbar = () => {
       animate={{ y: 0 }}
       className={`fixed w-full z-50 transition-all duration-300 ${
         isScrolled
-          ? "bg-cyan-950/30 backdrop-blur-md border-y border-white/20 shadow-lg"
+          ? "bg-cyan-950/30 backdrop-blur-md border-b border-white/20 shadow-lg"
           : "bg-transparent"
       }`}
     >
@@ -77,7 +77,12 @@ const Navbar = () => {
           >
             <RouterLink to="/">
               <h1 className="relative text-3xl text-cyan-600">
-                <span className="fugaz-one-regular">Mehedi</span>
+                <div className="flex items-center space-x-1">
+                  {/* <span className="">
+                    <CodeXml size={36} />
+                  </span> */}
+                  <span className="fugaz-one-regular">Mehedi</span>
+                </div>
                 <span className="absolute -top-2 -right-[20px]">
                   <Sparkle size={18} className="text-cyan-600" />
                 </span>
@@ -114,10 +119,11 @@ const Navbar = () => {
               <a
                 href="./my_resume.pdf"
                 target="_blank"
-                className="inline-flex items-center px-4 py-2 border border-transparent text-sm font-medium rounded-md text-white bg-cyan-600 hover:bg-cyan-700"
+                className="inline-flex items-center px-4 py-2 font-medium rounded-full text-white bg-cyan-600 hover:bg-cyan-700"
               >
-                <FileDown className="w-4 h-4 mr-2" />
+                {/* <FileDown className="w-4 h-4 mr-2" /> */}
                 Resume
+                <ArrowDownRight className="w-5 h-5 ml-2" />
               </a>
             </div>
           </div>
