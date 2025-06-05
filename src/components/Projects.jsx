@@ -3,61 +3,6 @@ import { Github, ExternalLink, ArrowRight } from "lucide-react";
 import { Link } from "react-router";
 import { projects } from "../Data/ProjectsData";
 
-// const projects = [
-//   {
-//     title: "Asset Flow [Asset Management System]",
-//     description:
-//       "AssetFlow is a web app for managing company assets, allowing HR managers to assign, track, and report on returnable and non-returnable assets. Employees can request and return assets, while the system automates notifications and subscription management for improved efficiency.",
-//     image:
-//       "https://camo.githubusercontent.com/afbe401a21f67e178ee282e20472c69fbe4c189acc9d9bfc86187a628f96b439/68747470733a2f2f692e6962622e636f2e636f6d2f4d786b6e3376526d2f61737365742d666c6f772e706e67",
-//     technologies: [
-//       "React",
-//       "Tailwind CSS",
-//       "Node.js",
-//       "MongoDB",
-//       "Express.js",
-//       "Firebase",
-//       "Stripe",
-//     ],
-//     github: "https://github.com/syedmehedi34/asset-flow",
-//     live: "https://asset-flow.netlify.app/",
-//   },
-//   {
-//     title: "Next Blog - A Blogging website",
-//     description:
-//       "Next Blog is a modern, fully-responsive blogging platform built with React, Firebase, and MongoDB. It features user authentication, wish-list management, and a commenting system. Admins can manage content, and the site is optimised for mobile, tablet, and desktop devices.",
-//     image:
-//       "https://images.unsplash.com/photo-1540350394557-8d14678e7f91?auto=format&fit=crop&q=80&w=800",
-//     technologies: [
-//       "React",
-//       "Tailwind CSS",
-//       "Node.js",
-//       "MongoDB",
-//       "Express.js",
-//       "Firebase",
-//     ],
-//     github: "https://github.com/syedmehedi34/next-blog",
-//     live: "https://your-next-blog.netlify.app/",
-//   },
-//   {
-//     title: "Gaming Groove : A Game Review Application",
-//     description:
-//       "Gaming Groove is a game review app where users can browse, share, and manage game reviews. It features secure login, user dashboards, and a watchlist. Built with React, Firebase, and MongoDB, it offers a responsive and easy-to-use platform for gaming enthusiasts.",
-//     image:
-//       "https://images.unsplash.com/photo-1592210454359-9043f067919b?auto=format&fit=crop&q=80&w=800",
-//     technologies: [
-//       "React",
-//       "Tailwind CSS",
-//       "Node.js",
-//       "MongoDB",
-//       "Express.js",
-//       "Firebase",
-//     ],
-//     github: "https://github.com/syedmehedi34/gaming-groove-client",
-//     live: "https://gaming-groove.surge.sh/",
-//   },
-// ];
-
 const containerVariants = {
   hidden: { opacity: 0 },
   visible: {
