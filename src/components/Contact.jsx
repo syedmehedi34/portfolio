@@ -1,8 +1,9 @@
 /* eslint-disable no-unused-vars */
 import { useRef, useState } from "react";
-import { motion } from "framer-motion";
 import { MapPin, Phone, Mail, Send, Dot } from "lucide-react";
 import emailjs from "@emailjs/browser";
+import contactLottie from "../assets/contact_lottie.json";
+import Lottie from "lottie-react"; // Import Lottie component
 
 const Contact = () => {
   const formRef = useRef(null);
@@ -30,204 +31,93 @@ const Contact = () => {
   };
 
   return (
-    <section id="contact" className="py-20 bg-gray-50 dark:bg-gray-800">
+    <section id="contact" className="py-20 bg-cyan-800">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: false }}
-          transition={{ duration: 0.5 }}
-          className="relative z-10"
-        >
-          <h2 className="text-3xl font-bold text-center text-gray-900 dark:text-gray-50 mb-12">
+        <div className="relative z-10">
+          <h2 className="text-3xl font-bold text-center text-gray-900 mb-12">
             Contact Me
           </h2>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-12">
-            <motion.div
-              initial={{ opacity: 0, x: -20 }}
-              whileInView={{ opacity: 1, x: 0 }}
-              viewport={{ once: false }}
-              transition={{ duration: 0.5, delay: 0.2 }}
-              className="bg-white dark:bg-gray-600 p-8 rounded-2xl shadow-[0_8px_30px_rgb(0,0,0,0.12)] hover:shadow-[0_8px_30px_rgb(0,0,0,0.16)] transition-shadow duration-300"
-            >
-              <div className="space-y-8">
-                <motion.div
-                  whileHover={{ scale: 1.02 }}
-                  className="flex items-start space-x-4 p-4 rounded-xl bg-gray-50 dark:bg-gray-700"
-                >
-                  <div className="flex-shrink-0">
-                    <div className="md:w-12 md:h-12 h-8 w-8 bg-indigo-600 rounded-xl flex items-center justify-center">
-                      <MapPin className="md:w-6 md:h-6 h-4 w-4 text-white" />
-                    </div>
-                  </div>
-                  <div>
-                    <h3 className="text-lg font-semibold text-gray-900 dark:text-gray-50">
-                      Address
-                    </h3>
-                    <p className="mt-1 text-gray-600 dark:text-gray-400">
-                      Rajshahi, Bangladesh
-                    </p>
-                  </div>
-                </motion.div>
+            {/* left container */}
+            <div className="border">
+              <h3 className="text-2xl text-white font-semibold mb-2">
+                Let’s Build Something Amazing
+              </h3>
+              <p className="text-white text-lg">
+                Whether it’s a new project, a collaboration, or just a chat
+                about tech, I’m all ears! Drop me a message, and let’s make it
+                happen.
+              </p>
 
-                <motion.div
-                  whileHover={{ scale: 1.02 }}
-                  className="flex items-start space-x-4 p-4 rounded-xl bg-gray-50 dark:bg-gray-700"
-                >
-                  <div className="flex-shrink-0">
-                    <div className="md:w-12 md:h-12 h-8 w-8 bg-indigo-600 rounded-xl flex items-center justify-center">
-                      <Phone className="md:w-6 md:h-6 h-4 w-4 text-white" />
-                    </div>
-                  </div>
-                  <div>
-                    <h3 className="text-lg font-semibold text-gray-900 dark:text-gray-50 flex items-center space-x-2">
-                      <span>Phone </span>
-                      <span>
-                        <img
-                          className="md:w-5 md:h-5 h-4 w-4"
-                          src="https://img.icons8.com/?size=100&id=16713&format=png&color=000000"
-                          alt=""
+              {/* form  */}
+              <section className="py-10">
+                <div className="bg-gray-800 p-8 rounded-2xl shadow-lg border-2 border-purple-500">
+                  <form
+                    ref={formRef}
+                    onSubmit={handleSubmit}
+                    className="space-y-6"
+                  >
+                    <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                      <div>
+                        <input
+                          type="text"
+                          name="name"
+                          placeholder="Your Name"
+                          className="w-full px-4 py-3 bg-gray-700 text-gray-300 border-2 border-purple-500 rounded-lg focus:outline-none focus:ring-2 focus:ring-purple-400"
+                          required
                         />
-                      </span>
-                    </h3>
-                    <p className="mt-1 text-gray-600 dark:text-gray-400">
-                      +880 1731771438
-                    </p>
-                  </div>
-                </motion.div>
-
-                <motion.div
-                  whileHover={{ scale: 1.02 }}
-                  className="flex items-start space-x-4 p-4 rounded-xl bg-gray-50 dark:bg-gray-700"
-                >
-                  <div className="flex-shrink-0">
-                    <div className="md:w-12 md:h-12 h-8 w-8 bg-indigo-600 rounded-xl flex items-center justify-center">
-                      <Mail className="md:w-6 md:h-6 h-4 w-4 text-white" />
+                      </div>
+                      <div>
+                        <input
+                          type="email"
+                          name="email"
+                          placeholder="Your Email"
+                          className="w-full px-4 py-3 bg-gray-700 text-gray-300 border-2 border-purple-500 rounded-lg focus:outline-none focus:ring-2 focus:ring-purple-400"
+                          required
+                        />
+                      </div>
                     </div>
-                  </div>
-                  <div>
-                    <h3 className="text-lg font-semibold text-gray-900 dark:text-gray-50">
-                      Email
-                    </h3>
-                    <p className="mt-1 text-gray-600 dark:text-gray-400 flex flex-col space-y-1">
-                      <span className="flex items-center">
-                        <span className=" max-[430px]:hidden ">
-                          <Dot />
-                        </span>
-                        <span className="break-all max-[430px]:text-sm max-[370px]:text-[12px]">
-                          syedmehedi34@gmail.com
-                        </span>
-                      </span>
-                      <span className="flex items-center">
-                        <span className="max-[430px]:hidden ">
-                          <Dot />
-                        </span>
-                        <span className="break-all max-[430px]:text-sm max-[370px]:text-[12px]">
-                          2004051@student.ruet.ac.bd
-                        </span>
-                      </span>
-                    </p>
-                  </div>
-                </motion.div>
-              </div>
-            </motion.div>
+                    <div>
+                      <textarea
+                        name="message"
+                        placeholder="Your Message"
+                        rows={4}
+                        className="w-full px-4 py-3 bg-gray-700 text-gray-300 border-2 border-purple-500 rounded-lg focus:outline-none focus:ring-2 focus:ring-purple-400"
+                        required
+                      />
+                    </div>
+                    <button
+                      type="submit"
+                      disabled={isSubmitting}
+                      className="w-full px-6 py-3 bg-purple-600 text-white rounded-lg hover:bg-purple-700 transition-colors duration-300"
+                    >
+                      {isSubmitting ? "Sending..." : "Send Message"}
+                    </button>
+                    {submitStatus === "success" && (
+                      <p className="text-green-500 text-center font-medium">
+                        Message sent successfully!
+                      </p>
+                    )}
+                    {submitStatus === "error" && (
+                      <p className="text-red-500 text-center font-medium">
+                        Failed to send message. Please try again.
+                      </p>
+                    )}
+                  </form>
+                </div>
+              </section>
+            </div>
 
-            <motion.div
-              initial={{ opacity: 0, x: 20 }}
-              whileInView={{ opacity: 1, x: 0 }}
-              viewport={{ once: false }}
-              transition={{ duration: 0.5, delay: 0.2 }}
-              className="bg-white dark:bg-gray-600 p-8 rounded-2xl shadow-[0_8px_30px_rgb(0,0,0,0.12)] hover:shadow-[0_8px_30px_rgb(0,0,0,0.16)] transition-shadow duration-300"
-            >
-              <form ref={formRef} onSubmit={handleSubmit} className="space-y-6">
-                <div>
-                  <label
-                    htmlFor="name"
-                    className="block text-sm font-medium text-gray-700 dark:text-gray-50 mb-2 "
-                  >
-                    Name
-                  </label>
-                  <input
-                    type="text"
-                    name="name"
-                    id="name"
-                    required
-                    className="block w-full px-4 py-3 rounded-xl border-2 border-gray-200 dark:border-gray-500 focus:border-indigo-500 focus:ring-2 focus:ring-indigo-200 outline-none transition-all duration-300 text-black dark:text-gray-50"
-                    placeholder="Your Name"
-                  />
-                </div>
-                <div>
-                  <label
-                    htmlFor="email"
-                    className="block text-sm font-medium text-gray-700 dark:text-gray-50 mb-2"
-                  >
-                    Email
-                  </label>
-                  <input
-                    type="email"
-                    name="email"
-                    id="email"
-                    required
-                    className="block w-full px-4 py-3 rounded-xl border-2 border-gray-200 dark:border-gray-500 focus:border-indigo-500 focus:ring-2 focus:ring-indigo-200 outline-none transition-all duration-300 text-black dark:text-gray-50"
-                    placeholder="your.email@example.com"
-                  />
-                </div>
-                <div>
-                  <label
-                    htmlFor="message"
-                    className="block text-sm font-medium text-gray-700 dark:text-gray-50 mb-2"
-                  >
-                    Message
-                  </label>
-                  <textarea
-                    name="message"
-                    id="message"
-                    rows={4}
-                    required
-                    className="block w-full px-4 py-3 rounded-xl border-2 border-gray-200 dark:border-gray-500 focus:border-indigo-500 focus:ring-2 focus:ring-indigo-200 outline-none transition-all duration-300 resize-none text-black dark:text-gray-50"
-                    placeholder="Your Message"
-                  />
-                </div>
-                <motion.button
-                  type="submit"
-                  disabled={isSubmitting}
-                  whileHover={{ scale: 1.02 }}
-                  whileTap={{ scale: 0.98 }}
-                  className="w-full px-8 py-4 bg-indigo-600 text-white rounded-xl font-medium text-base hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2 disabled:opacity-50 disabled:cursor-not-allowed transition-all duration-300 flex items-center justify-center space-x-2"
-                >
-                  {isSubmitting ? (
-                    "Sending..."
-                  ) : (
-                    <>
-                      <Send className="w-5 h-5" />
-                      <span className="text-sm md:text-[16px]">
-                        Send Message
-                      </span>
-                    </>
-                  )}
-                </motion.button>
-                {submitStatus === "success" && (
-                  <motion.p
-                    initial={{ opacity: 0, y: 10 }}
-                    animate={{ opacity: 1, y: 0 }}
-                    className="text-green-600 text-center font-medium"
-                  >
-                    Message sent successfully!
-                  </motion.p>
-                )}
-                {submitStatus === "error" && (
-                  <motion.p
-                    initial={{ opacity: 0, y: 10 }}
-                    animate={{ opacity: 1, y: 0 }}
-                    className="text-red-600 text-center font-medium"
-                  >
-                    Failed to send message. Please try again.
-                  </motion.p>
-                )}
-              </form>
-            </motion.div>
+            {/* right container */}
+            <div className="border flex items-center justify-center">
+              <Lottie
+                animationData={contactLottie}
+                loop={true}
+                style={{ width: "100%", maxWidth: "400px", height: "auto" }}
+              />
+            </div>
           </div>
-        </motion.div>
+        </div>
       </div>
     </section>
   );
