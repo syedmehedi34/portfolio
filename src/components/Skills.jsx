@@ -108,7 +108,8 @@ const Skills = () => {
       }}
       aria-labelledby="skills-heading"
     >
-      <div className="absolute inset-0 bg-blue-950/70"></div>
+      <div className="absolute inset-0 bg-cyan-950 opacity-70" />
+
       <div className="relative z-10 mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 text-center">
         <h2
           id="skills-heading"
