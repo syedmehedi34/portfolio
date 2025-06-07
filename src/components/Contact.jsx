@@ -6,6 +6,7 @@ import { FaLinkedinIn, FaFacebookF, FaWhatsapp } from "react-icons/fa6";
 import emailjs from "@emailjs/browser";
 import contactLottie from "../assets/contact_lottie.json";
 import Lottie from "lottie-react";
+import backgroundImage from "../assets/background-image.jpg";
 
 const Contact = () => {
   const formRef = useRef(null);
@@ -33,13 +34,24 @@ const Contact = () => {
   };
 
   return (
-    <section id="contact" className="py-16 bg-cyan-800">
+    <section
+      id="contact"
+      className="py-16 bg-cyan-800 relative"
+      style={{
+        backgroundImage: `url(${backgroundImage})`,
+        backgroundAttachment: "fixed",
+        backgroundPosition: "center",
+        backgroundSize: "cover",
+        backgroundRepeat: "no-repeat",
+      }}
+    >
+      <div className="absolute inset-0 bg-cyan-950 opacity-70"></div>
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="relative">
           <h2 className="text-4xl font-extrabold text-center text-white mb-12 tracking-tight">
             Get in Touch
           </h2>
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-5 px-20">
             {/* Left Container */}
             <div className="space-y-8">
               <div>
@@ -52,7 +64,9 @@ const Contact = () => {
                   happen.
                 </p>
               </div>
-              <div className="bg-white p-8 rounded-xl shadow-lg">
+
+              {/* left form  */}
+              <div className="bg-cyan-50/10 backdrop-blur-sm p-8 rounded-xl shadow-lg">
                 <form
                   ref={formRef}
                   onSubmit={handleSubmit}
@@ -64,7 +78,7 @@ const Contact = () => {
                         type="text"
                         name="name"
                         placeholder="Your Name"
-                        className="w-full px-4 py-3 bg-gray-100 text-gray-800 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-cyan-500 transition-colors"
+                        className="w-full px-4 py-3 text-white border border-cyan-600/60 rounded-lg focus:outline-none focus:ring-1 focus:ring-cyan-600/90 transition-colors"
                         required
                       />
                     </div>
@@ -73,7 +87,7 @@ const Contact = () => {
                         type="email"
                         name="email"
                         placeholder="Your Email"
-                        className="w-full px-4 py-3 bg-gray-100 text-gray-800 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-cyan-500 transition-colors"
+                        className="w-full px-4 py-3 text-white border border-cyan-600/60 rounded-lg focus:outline-none focus:ring-1 focus:ring-cyan-600/90 transition-colors"
                         required
                       />
                     </div>
@@ -83,7 +97,7 @@ const Contact = () => {
                       name="message"
                       placeholder="Your Message"
                       rows={5}
-                      className="w-full px-4 py-3 bg-gray-100 text-gray-800 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-cyan-500 transition-colors"
+                      className="w-full px-4 py-3 text-white border border-cyan-600/60 rounded-lg focus:outline-none focus:ring-1 focus:ring-cyan-600/90 transition-colors"
                       required
                     />
                   </div>
@@ -111,7 +125,7 @@ const Contact = () => {
             {/* Right Container */}
             <div className="flex flex-col items-center justify-center space-y-8">
               <div
-                className="w-48 h-48 rounded-full p-5 border-3 border-cyan-500 tracking-tight"
+                className="w-52 h-52 rounded-full p-5 border-3 border-cyan-500 tracking-tight"
                 style={{
                   boxShadow:
                     "0 0 10px rgba(6, 182, 212, 0.4), 0 0 20px rgba(6, 182, 212, 0.5)",
@@ -138,18 +152,18 @@ const Contact = () => {
                   }
                 `}
               </style>
-              <div className="space-y-4 text-gray-700 text-lg">
+              <div className="space-y-4 text-white text-lg">
                 <div className="flex items-center space-x-3">
-                  <Mail className="w-5 h-5 text-cyan-600" />
+                  <Mail className="w-5 h-5 " />
                   <span>syedmehedi34@gmail.com</span>
                 </div>
                 <div className="flex items-center space-x-3">
-                  <Phone className="w-5 h-5 text-cyan-600" />
-                  <span>+880 179 999 9999</span>
+                  <Phone className="w-5 h-5 " />
+                  <span>+880 173 177 1438</span>
                 </div>
                 <div className="flex items-center space-x-3">
-                  <MapPin className="w-5 h-5 text-cyan-600" />
-                  <span>Dhaka, Bangladesh</span>
+                  <MapPin className="w-5 h-5 " />
+                  <span>Rajshahi, Bangladesh</span>
                 </div>
               </div>
               <div className="flex space-x-4">
