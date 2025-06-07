@@ -6,11 +6,6 @@ import backgroundImage from "../assets/background-image.jpg";
 const Projects = () => {
   return (
     <>
-      {/* top section  */}
-      <section className="border-y border-y-white bg-black py-5 text-center text-white">
-        Syed Mehedi Hasan © 2024. All rights reserved.
-      </section>
-
       {/* projects section  */}
       <section
         id="projects"
@@ -24,7 +19,7 @@ const Projects = () => {
         }}
         aria-labelledby="projects-heading"
       >
-        <div className="absolute inset-0 bg-blue-950/70"></div>
+        <div className="absolute inset-0 bg-cyan-950 opacity-70" />
 
         {/* main content  */}
         <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
